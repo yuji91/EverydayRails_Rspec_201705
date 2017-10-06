@@ -196,7 +196,7 @@ describe ContactsController do
         end
 
         it "does not change the contact's attributes" do
-          expect(assigns(:contact).reload.attributes).to eq contact.attributes
+          expect(assigns(:contact).reload.attributes).to eq contact.reload.attributes
         end
 
         it "re-renders the edit method" do
